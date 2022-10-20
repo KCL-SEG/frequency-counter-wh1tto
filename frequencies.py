@@ -4,6 +4,10 @@
 def frequencies(items):
     frequencies = {}
     for item in items:
-        frequencies[item] = items.count(item)
+        if (item in frequencies):
+            frequencies[item] += 1
+        else:
+            frequencies[item] = 1
+
     # Your code goes here
     return frequencies
